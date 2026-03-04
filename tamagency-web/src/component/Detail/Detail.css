@@ -1,0 +1,141 @@
+/* Detail.css */
+.quiz-container {
+  background-image: url("https://i.pinimg.com/736x/da/5c/d9/da5cd90c2370006a63824a6075040853.jpg");
+
+  /* Các thuộc tính giúp ảnh hiển thị đẹp nhất trên toàn màn hình */
+  background-size: cover; /* Phóng to ảnh để phủ kín toàn bộ màn hình */
+  background-position: center; /* Căn giữa ảnh */
+  background-repeat: no-repeat; /* Không lặp lại ảnh nếu màn hình quá to */
+  background-attachment: fixed; /* Giữ cố định ảnh nền khi cuộn chuột (tùy chọn) */
+
+  background-color: #e5e5dd;
+  min-height: 100vh;
+  width: 100vw; /* Đảm bảo rộng 100% màn hình */
+  box-sizing: border-box; /* Tính cả padding vào kích thước tổng */
+  padding: 40px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Quan trọng: để logo định vị theo container này */
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* Đưa logo về góc trên bên trái */
+.logo-image {
+  position: absolute;
+  top: 40px; /* Cách lề trên bằng đúng padding của container */
+  left: 40px; /* Cách lề trái bằng đúng padding của container */
+  width: 150px; /* Bạn có thể tăng giảm số này để logo to/nhỏ vừa mắt */
+  height: auto;
+  object-fit: contain;
+}
+
+.question-number {
+  font-size: 55px;
+  color: #ffb142;
+  text-shadow: 4px 4px 0px #000;
+  margin: 0;
+  letter-spacing: 3px;
+  font-weight: 900;
+}
+
+.quiz-main {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.question-text {
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 50px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.options-wrapper {
+  /* Nền trong suốt */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  /* XÓA background-color: #fff; ở đây */
+  border-radius: 40px;
+  padding: 40px 50px;
+}
+
+.options-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.option-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.option-letter {
+  background-color: #a0d87a;
+  color: #000;
+  font-size: 26px;
+  font-weight: 900;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #000;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.option-btn {
+  background-color: #2a5135;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  padding: 20px 30px;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.option-btn:hover {
+  transform: scale(1.02);
+  background-color: #1e3b26;
+}
+
+.back-btn {
+  margin-top: 40px;
+  text-decoration: none;
+  color: #2a5135;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
