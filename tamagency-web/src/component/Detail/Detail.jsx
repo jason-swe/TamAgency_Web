@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import questionsData from "../../data/question.json";
 import logo from "../../images/logo.png";
+import background from "../../images/background.mp4";
 import "./Detail.css";
 
 const Detail = () => {
@@ -83,6 +84,9 @@ const Detail = () => {
 
   return (
     <div className="quiz-container">
+      <video autoPlay muted loop playsInline className="video-bg">
+        <source src={background} type="video/mp4" />
+      </video>
       {/* Khối hiển thị Đồng hồ đếm ngược */}
       <div className="timer-wrapper">
         <span className="timer-text">

@@ -1,12 +1,6 @@
 /* Detail.css */
 .quiz-container {
-  background-image: url("https://i.pinimg.com/736x/da/5c/d9/da5cd90c2370006a63824a6075040853.jpg");
-
-  /* Các thuộc tính giúp ảnh hiển thị đẹp nhất trên toàn màn hình */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: none;
 
   min-height: 100vh;
   width: 100vw;
@@ -18,6 +12,37 @@
   align-items: center;
   position: relative;
 }
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Đẩy video xuống dưới */
+}
+
+/*.quiz-container {
+  background-image: url("https://i.pinimg.com/736x/da/5c/d9/da5cd90c2370006a63824a6075040853.jpg");
+
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+
+  background-color: #e5e5dd;
+  min-height: 100vh;
+  width: 100vw; 
+  box-sizing: border-box; 
+  padding: 40px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+*/
 
 .quiz-header {
   display: flex;
@@ -141,26 +166,6 @@
 .back-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
 } /* Detail.css */
-.quiz-container {
-  background-image: url("https://i.pinimg.com/736x/da/5c/d9/da5cd90c2370006a63824a6075040853.jpg");
-
-  /* Các thuộc tính giúp ảnh hiển thị đẹp nhất trên toàn màn hình */
-  background-size: cover; /* Phóng to ảnh để phủ kín toàn bộ màn hình */
-  background-position: center; /* Căn giữa ảnh */
-  background-repeat: no-repeat; /* Không lặp lại ảnh nếu màn hình quá to */
-  background-attachment: fixed; /* Giữ cố định ảnh nền khi cuộn chuột (tùy chọn) */
-
-  background-color: #e5e5dd;
-  min-height: 100vh;
-  width: 100vw; /* Đảm bảo rộng 100% màn hình */
-  box-sizing: border-box; /* Tính cả padding vào kích thước tổng */
-  padding: 40px;
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative; /* Quan trọng: để logo định vị theo container này */
-}
 
 .quiz-header {
   display: flex;
